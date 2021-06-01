@@ -6,17 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".ui.profile.ProfileFragment"
     android:orientation="vertical">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        android:background="#fece2f"
+        android:background="#BFDB7093"
         android:padding="20dp">
         <ImageView
             android:id="@+id/profile_image"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_centerVertical="true"
-            android:src="@drawable/profile_image" />
+            android:src="@drawable/profile_image1" />
+
         <TextView
             android:id="@+id/fullname_field"
             android:layout_width="wrap_content"
@@ -25,9 +27,10 @@
             android:layout_marginLeft="10dp"
             android:layout_toRightOf="@+id/profile_image"
             android:includeFontPadding="false"
-            android:text="Taimoor Sikander"
+            android:text="@string/profile_fullname"
             android:textColor="#000"
             android:textSize="20sp" />
+
         <TextView
             android:id="@+id/username_field"
             android:layout_width="wrap_content"
@@ -36,7 +39,8 @@
             android:layout_marginLeft="10dp"
             android:layout_toRightOf="@+id/profile_image"
             android:includeFontPadding="false"
-            android:text="taimoor_sikander"
+            android:text="@string/profile_telegram"
+            android:textColor="#000"
             android:textSize="14sp" />
     </RelativeLayout>
 
@@ -50,7 +54,7 @@
             android:layout_margin="10dp"
             android:layout_weight="1"
             android:layout_width="0dp"
-            app:cardBackgroundColor="#fece2f"
+            app:cardBackgroundColor="#DB7093"
             app:cardElevation="10dp">
             
             <RelativeLayout
@@ -64,7 +68,10 @@
                     android:layout_centerHorizontal="true"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
-                    android:text="Balance"
+                    android:text="@string/profile_info"
+                    android:gravity="center"
+                    android:layout_centerInParent="true"
+                    android:textColor="#000"
                     android:textSize="20sp" />
 
             </RelativeLayout>
@@ -77,39 +84,65 @@
         android:orientation="vertical"
         android:padding="20dp">
         <com.google.android.material.textfield.TextInputLayout
-            android:hint="Full Name"
+            android:hint="Email"
             android:id="@+id/github_name_profile"
             android:layout_height="wrap_content"
             android:layout_width="match_parent">
-        <com.google.android.material.textfield.TextInputEditText
-            android:drawableLeft="@drawable/ic_menu_send"
-            android:drawablePadding="10dp"
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_profile_email"
+                android:linksClickable="true"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:autoLink="email"
+                android:drawablePadding="10dp"
+                android:inputType="none"
+                android:text="@string/profile_email" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:hint="Full Name"
+            android:hint="Github"
             android:id="@+id/email_profile"
+
             android:layout_height="wrap_content"
             android:layout_width="match_parent">
+
             <com.google.android.material.textfield.TextInputEditText
-                android:drawableLeft="@drawable/ic_menu_send"
-                android:drawablePadding="10dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_width="match_parent" />
+                android:drawableLeft="@drawable/ic_profile_gitnub"
+                android:autoLink="web"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:drawablePadding="10dp"
+                android:inputType="none"
+                android:text="@string/profile_github" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:hint="Full Name"
+            android:hint="Linkedin"
             android:id="@+id/linkedn_profile"
             android:layout_height="wrap_content"
             android:layout_width="match_parent">
+
             <com.google.android.material.textfield.TextInputEditText
-                android:drawableLeft="@drawable/ic_menu_send"
-                android:drawablePadding="10dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_width="match_parent" />
+                android:drawableLeft="@drawable/ic_profile_linkedin"
+                android:autoLink="web"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:drawablePadding="10dp"
+                android:inputType="none"
+                android:text="@string/profile_linkedn" />
         </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
 

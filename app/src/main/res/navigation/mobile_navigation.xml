@@ -3,22 +3,31 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@+id/nav_crypto">
 
     <fragment
-        android:id="@+id/nav_home"
-        android:name="com.example.ryptographer.ui.piechart.PieChartFragment"
-        android:label="@string/menu_codes"
-        tools:layout="@layout/fragment_home" />
-
-    <fragment
-        android:id="@+id/nav_gallery"
+        android:id="@+id/nav_crypto"
         android:name="com.example.ryptographer.ui.crypto.CryptoFragment"
-        android:label="@string/menu_graph"
-        tools:layout="@layout/fragment_crypto" />
+        android:label="@string/menu_codes"
+        tools:layout="@layout/fragment_crypto">
+        <action
+            android:id="@+id/action_nav_crypto_to_nav_piechart"
+            app:destination="@id/nav_piechart" />
+    </fragment>
 
     <fragment
-        android:id="@+id/nav_slideshow"
+        android:id="@+id/nav_piechart"
+        android:name="com.example.ryptographer.ui.piechart.PieChartFragment"
+        android:label="@string/menu_graph"
+        tools:layout= "@layout/fragment_piechart">
+        <argument
+            android:name="data"
+            app:argType="string"
+            android:defaultValue='""' />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_profile"
         android:name="com.example.ryptographer.ui.profile.ProfileFragment"
         android:label="@string/menu_developer"
         tools:layout="@layout/fragment_profile" />

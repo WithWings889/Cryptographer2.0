@@ -23,4 +23,22 @@
     <string name="hint_key_ceaser">Ключ (число)</string>
     <string name="hint_key_wordcode_left">Ключ (слово)</string>
     <string name="hint_key_wordcode_right">Ключ для стовпчика(слово)</string>
+    <string name="hint_text_file">Обрати файл..</string>
+
+    //Profile
+    <string name="profile_fullname">Бережняк Ольга</string>
+    <string name="profile_email">o.berezhnyak@knu.ua</string>
+    <string name="profile_github">https://github.com/WithWings889</string>
+    <string name="profile_linkedn">https://www.linkedin.com/in/olha-berezhnyak-4b8833203/</string>
+    <string name="profile_telegram">\@with_wings</string>
+    <string name="profile_info">"Доброго дня! Я студентка 3 курсу кафедри ТТП-3. Цей додаток розроблено з любов'ю!"</string>
+
+    //PieChart
+    <string name="piechart_headline">Статистика</string>
+    <string name="piechart_fild_encodedC">Кодування Цезар</string>
+    <string name="piechart_fild_encodedW">Кодування </string>
+    <string name="piechart_fild_decodedC">Декодування Цезар</string>
+    <string name="piechart_fild_decodedW">Декодування</string>
+
+
 </resources>
